@@ -13116,34 +13116,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning-Engineer-Nanodegree">Machine Learning Engineer Nanodegree<a class="anchor-link" href="#Machine-Learning-Engineer-Nanodegree">&#182;</a></h1><h2 id="Unsupervised-Learning">Unsupervised Learning<a class="anchor-link" href="#Unsupervised-Learning">&#182;</a></h2><h2 id="Project:-Creating-Customer-Segments">Project: Creating Customer Segments<a class="anchor-link" href="#Project:-Creating-Customer-Segments">&#182;</a></h2>
+<h1 id="Machine-Learning---Unsupervised-Learning">Machine Learning - Unsupervised Learning<a class="anchor-link" href="#Machine-Learning---Unsupervised-Learning">&#182;</a></h1><h2 id="Project:-Creating-Customer-Segments">Project: Creating Customer Segments<a class="anchor-link" href="#Project:-Creating-Customer-Segments">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Welcome to the third project of the Machine Learning Engineer Nanodegree! In this notebook, some template code has already been provided for you, and it will be your job to implement the additional functionality necessary to successfully complete this project. Sections that begin with <strong>'Implementation'</strong> in the header indicate that the following block of code will require additional functionality which you must provide. Instructions will be provided for each section and the specifics of the implementation are marked in the code block with a <code>'TODO'</code> statement. Please be sure to read the instructions carefully!</p>
-<p>In addition to implementing code, there will be questions that you must answer which relate to the project and your implementation. Each section where you will answer a question is preceded by a <strong>'Question X'</strong> header. Carefully read each question and provide thorough answers in the following text boxes that begin with <strong>'Answer:'</strong>. Your project submission will be evaluated based on your answers to each of the questions and the implementation you provide.</p>
-<blockquote><p><strong>Note:</strong> Code and Markdown cells can be executed using the <strong>Shift + Enter</strong> keyboard shortcut. In addition, Markdown cells can be edited by typically double-clicking the cell to enter edit mode.</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><p>In this project, you will analyze a dataset containing data on various customers' annual spending amounts (reported in <em>monetary units</em>) of diverse product categories for internal structure. One goal of this project is to best describe the variation in the different types of customers that a wholesale distributor interacts with. Doing so would equip the distributor with insight into how to best structure their delivery service to meet the needs of each customer.</p>
+<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><p>In this project, we will analyze a dataset containing data on various customers' annual spending amounts (reported in <em>monetary units</em>) of diverse product categories for internal structure. One goal of this project is to best describe the variation in the different types of customers that a wholesale distributor interacts with. Doing so would equip the distributor with insight into how to best structure their delivery service to meet the needs of each customer.</p>
 <p>The dataset for this project can be found on the <a href="https://archive.ics.uci.edu/ml/datasets/Wholesale+customers">UCI Machine Learning Repository</a>. For the purposes of this project, the features <code>'Channel'</code> and <code>'Region'</code> will be excluded in the analysis — with focus instead on the six product categories recorded for customers.</p>
-<p>Run the code block below to load the wholesale customers dataset, along with a few of the necessary Python libraries required for this project. You will know the dataset loaded successfully if the size of the dataset is reported.</p>
+<p>Running the code block below will load the wholesale customers dataset, along with a few of the necessary Python libraries required for this project. We will know the dataset loaded successfully if the size of the dataset is reported.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13192,15 +13181,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>In this section, you will begin exploring the data through visualizations and code to understand how each feature is related to the others. You will observe a statistical description of the dataset, consider the relevance of each feature, and select a few sample data points from the dataset which you will track through the course of this project.</p>
-<p>Run the code block below to observe a statistical description of the dataset. Note that the dataset is composed of six important product categories: <strong>'Fresh'</strong>, <strong>'Milk'</strong>, <strong>'Grocery'</strong>, <strong>'Frozen'</strong>, <strong>'Detergents_Paper'</strong>, and <strong>'Delicatessen'</strong>. Consider what each category represents in terms of products you could purchase.</p>
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>In this section, we will begin exploring the data through visualizations and code to understand how each feature is related to the others. We will observe a statistical description of the dataset, consider the relevance of each feature, and select a few sample data points from the dataset which we will track through the course of this project.</p>
+<p>We wiil run the code block below to observe a statistical description of the dataset. Note that the dataset is composed of six important product categories: <strong>'Fresh'</strong>, <strong>'Milk'</strong>, <strong>'Grocery'</strong>, <strong>'Frozen'</strong>, <strong>'Detergents_Paper'</strong>, and <strong>'Delicatessen'</strong>. Consider what each category represents in terms of products we could purchase.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -13335,17 +13324,17 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Selecting-Samples">Implementation: Selecting Samples<a class="anchor-link" href="#Implementation:-Selecting-Samples">&#182;</a></h3><p>To get a better understanding of the customers and how their data will transform through the analysis, it would be best to select a few sample data points and explore them in more detail. In the code block below, add <strong>three</strong> indices of your choice to the <code>indices</code> list which will represent the customers to track. It is suggested to try different sets of samples until you obtain customers that vary significantly from one another.</p>
+<h3 id="Implementation:-Selecting-Samples">Implementation: Selecting Samples<a class="anchor-link" href="#Implementation:-Selecting-Samples">&#182;</a></h3><p>To get a better understanding of the customers and how their data will transform through the analysis, it would be best to select a few sample data points and explore them in more detail. In the code block below, we will add <strong>three</strong> indices of our choice to the <code>indices</code> list which will represent the customers to track. It is suggested to try different sets of samples until we obtain customers that vary significantly from one another.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select three indices of your choice you wish to sample from the dataset</span>
 <span class="n">indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">279</span><span class="p">]</span>
 
 <span class="c1"># Create a DataFrame of the chosen samples</span>
@@ -13448,11 +13437,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h3><p>Consider the total purchase cost of each product category and the statistical description of the dataset above for your sample customers.</p>
+<h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h3><p>Consider the total purchase cost of each product category and the statistical description of the dataset above for our sample customers.</p>
 <ul>
-<li>What kind of establishment (customer) could each of the three samples you've chosen represent?</li>
+<li>What kind of establishment (customer) could each of the three samples we've chosen represent?</li>
 </ul>
-<p><strong>Hint:</strong> Examples of establishments include places like markets, cafes, delis, wholesale retailers, among many others. Avoid using names for establishments, such as saying <em>"McDonalds"</em> when describing a sample customer as a restaurant. You can use the mean values for reference to compare your samples with. The mean values are as follows:</p>
+<p><strong>Hint:</strong> Examples of establishments include places like markets, cafes, delis, wholesale retailers, among many others. Avoid using names for establishments, such as saying <em>"McDonalds"</em> when describing a sample customer as a restaurant. WE can use the mean values for reference to compare our samples with. The mean values are as follows:</p>
 <ul>
 <li>Fresh: 12000.2977</li>
 <li>Milk: 5796.2</li>
@@ -13460,7 +13449,7 @@ div#notebook {
 <li>Detergents_paper: 2881.4</li>
 <li>Delicatessen: 1524.8</li>
 </ul>
-<p>Knowing this, how do your samples compare? Does that help in driving your insight into what kind of establishments they might be?</p>
+<p>Knowing this, how do our samples compare? Does that help in driving our insight into what kind of establishments they might be?</p>
 
 </div>
 </div>
@@ -13468,7 +13457,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Based on the comparison of the total purchase of the individuals from sample customers with the statistical data for the entire dataset following is what I think each individual in my sample customer set represents -</p>
+<p><strong>Answer:</strong> Based on the comparison of the total purchase of the individuals from sample customers with the statistical data for the entire dataset following is what we think each individual in my sample customer set represents -</p>
 <p>0 - Except for the fresh every other product's purchasing is way below than mean indicating that it is representing a restaurant.</p>
 <p>1 - Except for the fresh and Delicatessen every other product's purchasing is way below than mean indicating that it is representing a local Deli shop.</p>
 <p>2 - Purchasing of this customer is approximately equal to the 75% of each product's sell, hence it would be suitable to call it a wholesale retailer.</p>
@@ -13480,7 +13469,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-Feature-Relevance">Implementation: Feature Relevance<a class="anchor-link" href="#Implementation:-Feature-Relevance">&#182;</a></h3><p>One interesting thought to consider is if one (or more) of the six product categories is actually relevant for understanding customer purchasing. That is to say, is it possible to determine whether customers purchasing some amount of one category of products will necessarily purchase some proportional amount of another category of products? We can make this determination quite easily by training a supervised regression learner on a subset of the data with one feature removed, and then score how well that model can predict the removed feature.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will find this out by implement the following:</p>
 <ul>
 <li>Assign <code>new_data</code> a copy of the data by removing a feature of your choice using the <code>DataFrame.drop</code> function.</li>
 <li>Use <code>sklearn.cross_validation.train_test_split</code> to split the dataset into training and testing sets.<ul>
@@ -13496,23 +13485,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span>
-<span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
+<span class="c1"># Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
 <span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Detergents_Paper&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># TODO: Split the data into training and testing sets(0.25) using the given feature as the target</span>
+<span class="c1"># Split the data into training and testing sets(0.25) using the given feature as the target</span>
 <span class="c1"># Set a random state.</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Detergents_Paper&#39;</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># TODO: Create a decision tree regressor and fit it to the training set</span>
+<span class="c1"># Create a decision tree regressor and fit it to the training set</span>
 <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="c1"># TODO: Report the score of the prediction using the testing set</span>
+<span class="c1"># Report the score of the prediction using the testing set</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 </pre></div>
@@ -13544,7 +13533,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h3><ul>
-<li>Which feature did you attempt to predict? </li>
+<li>Which feature did I attempt to predict? </li>
 <li>What was the reported prediction score? </li>
 <li>Is this feature necessary for identifying customers' spending habits?</li>
 </ul>
@@ -13565,14 +13554,14 @@ Since Detergents_Paper can be predicted with accuracy of 53% which implies that 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Visualize-Feature-Distributions">Visualize Feature Distributions<a class="anchor-link" href="#Visualize-Feature-Distributions">&#182;</a></h3><p>To get a better understanding of the dataset, we can construct a scatter matrix of each of the six product features present in the data. If you found that the feature you attempted to predict above is relevant for identifying a specific customer, then the scatter matrix below may not show any correlation between that feature and the others. Conversely, if you believe that feature is not relevant for identifying a specific customer, the scatter matrix might show a correlation between that feature and another feature in the data. Run the code block below to produce a scatter matrix.</p>
+<h3 id="Visualize-Feature-Distributions">Visualize Feature Distributions<a class="anchor-link" href="#Visualize-Feature-Distributions">&#182;</a></h3><p>To get a better understanding of the dataset, I can construct a scatter matrix of each of the six product features present in the data. If I found that the feature I attempted to predict above is relevant for identifying a specific customer, then the scatter matrix below may not show any correlation between that feature and the others. Conversely, if I believe that feature is not relevant for identifying a specific customer, the scatter matrix might show a correlation between that feature and another feature in the data. Running the code block below to produce a scatter matrix.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -13646,7 +13635,7 @@ Taking scatter matrix as a reference; Milk, Grocery and Detergent_Paper looks co
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Preprocessing">Data Preprocessing<a class="anchor-link" href="#Data-Preprocessing">&#182;</a></h2><p>In this section, you will preprocess the data to create a better representation of customers by performing a scaling on the data and detecting (and optionally removing) outliers. Preprocessing data is often times a critical step in assuring that results you obtain from your analysis are significant and meaningful.</p>
+<h2 id="Data-Preprocessing">Data Preprocessing<a class="anchor-link" href="#Data-Preprocessing">&#182;</a></h2><p>In this section, we will preprocess the data to create a better representation of customers by performing a scaling on the data and detecting (and optionally removing) outliers. Preprocessing data is often times a critical step in assuring that results we obtain from your analysis are significant and meaningful.</p>
 
 </div>
 </div>
@@ -13655,7 +13644,7 @@ Taking scatter matrix as a reference; Milk, Grocery and Detergent_Paper looks co
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-Feature-Scaling">Implementation: Feature Scaling<a class="anchor-link" href="#Implementation:-Feature-Scaling">&#182;</a></h3><p>If data is not normally distributed, especially if the mean and median vary significantly (indicating a large skew), it is most <a href="http://econbrowser.com/archives/2014/02/use-of-logarithms-in-economics">often appropriate</a> to apply a non-linear scaling — particularly for financial data. One way to achieve this scaling is by using a <a href="http://scipy.github.io/devdocs/generated/scipy.stats.boxcox.html">Box-Cox test</a>, which calculates the best power transformation of the data that reduces skewness. A simpler approach which can work in most cases would be applying the natural logarithm.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will implement the following:</p>
 <ul>
 <li>Assign a copy of the data to <code>log_data</code> after applying logarithmic scaling. Use the <code>np.log</code> function for this.</li>
 <li>Assign a copy of the sample data to <code>log_samples</code> after applying logarithmic scaling. Again, use <code>np.log</code>.</li>
@@ -13666,13 +13655,13 @@ Taking scatter matrix as a reference; Milk, Grocery and Detergent_Paper looks co
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Scale the data using the natural logarithm</span>
 <span class="n">log_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="c1"># TODO: Scale the sample data using the natural logarithm</span>
+<span class="c1"># Scale the sample data using the natural logarithm</span>
 <span class="n">log_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
 
 <span class="c1"># Produce a scatter matrix for each pair of newly-transformed features</span>
@@ -13721,15 +13710,15 @@ Taking scatter matrix as a reference; Milk, Grocery and Detergent_Paper looks co
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Observation">Observation<a class="anchor-link" href="#Observation">&#182;</a></h3><p>After applying a natural logarithm scaling to the data, the distribution of each feature should appear much more normal. For any pairs of features you may have identified earlier as being correlated, observe here whether that correlation is still present (and whether it is now stronger or weaker than before).</p>
-<p>Run the code below to see how the sample data has changed after having the natural logarithm applied to it.</p>
+<h3 id="Observation">Observation<a class="anchor-link" href="#Observation">&#182;</a></h3><p>After applying a natural logarithm scaling to the data, the distribution of each feature should appear much more normal. For any pairs of features we have identified earlier as being correlated, observe here whether that correlation is still present (and whether it is now stronger or weaker than before).</p>
+<p>We will run the code below to see how the sample data has changed after having the natural logarithm applied to it.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -13820,34 +13809,34 @@ Taking scatter matrix as a reference; Milk, Grocery and Detergent_Paper looks co
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-Outlier-Detection">Implementation: Outlier Detection<a class="anchor-link" href="#Implementation:-Outlier-Detection">&#182;</a></h3><p>Detecting outliers in the data is extremely important in the data preprocessing step of any analysis. The presence of outliers can often skew results which take into consideration these data points. There are many "rules of thumb" for what constitutes an outlier in a dataset. Here, we will use <a href="http://datapigtechnologies.com/blog/index.php/highlighting-outliers-in-your-data-with-the-tukey-method/">Tukey's Method for identfying outliers</a>: An <em>outlier step</em> is calculated as 1.5 times the interquartile range (IQR). A data point with a feature that is beyond an outlier step outside of the IQR for that feature is considered abnormal.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will implement the following:</p>
 <ul>
 <li>Assign the value of the 25th percentile for the given feature to <code>Q1</code>. Use <code>np.percentile</code> for this.</li>
 <li>Assign the value of the 75th percentile for the given feature to <code>Q3</code>. Again, use <code>np.percentile</code>.</li>
 <li>Assign the calculation of an outlier step for the given feature to <code>step</code>.</li>
 <li>Optionally remove data points from the dataset by adding indices to the <code>outliers</code> list.</li>
 </ul>
-<p><strong>NOTE:</strong> If you choose to remove any outliers, ensure that the sample data does not contain any of these points!<br>
-Once you have performed this implementation, the dataset will be stored in the variable <code>good_data</code>.</p>
+<p><strong>NOTE:</strong> If we choose to remove any outliers, ensure that the sample data does not contain any of these points!<br>
+Once we have performed this implementation, the dataset will be stored in the variable <code>good_data</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     
-    <span class="c1"># TODO: Calculate Q1 (25th percentile of the data) for the given feature</span>
+    <span class="c1"># Calculate Q1 (25th percentile of the data) for the given feature</span>
     <span class="n">Q1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span>
     
-    <span class="c1"># TODO: Calculate Q3 (75th percentile of the data) for the given feature</span>
+    <span class="c1"># Calculate Q3 (75th percentile of the data) for the given feature</span>
     <span class="n">Q3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
     
-    <span class="c1"># TODO: Use the interquartile range to calculate an outlier step (1.5 times the interquartile range)</span>
+    <span class="c1"># Use the interquartile range to calculate an outlier step (1.5 times the interquartile range)</span>
     <span class="n">step</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span><span class="p">)</span>
     
     <span class="c1"># Display the outliers</span>
@@ -14624,7 +14613,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <li>Should these data points be removed from the dataset? </li>
 <li>If any data points were added to the <code>outliers</code> list to be removed, explain why.</li>
 </ul>
-<p><strong> Hint: </strong> If you have datapoints that are outliers in multiple categories think about why that may be and if they warrant removal. Also note how k-means is affected by outliers and whether or not this plays a factor in your analysis of whether or not to remove them.</p>
+<p><strong> Hint: </strong> If we have datapoints that are outliers in multiple categories think about why that may be and if they warrant removal. Also note how k-means is affected by outliers and whether or not this plays a factor in your analysis of whether or not to remove them.</p>
 
 </div>
 </div>
@@ -14642,7 +14631,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Transformation">Feature Transformation<a class="anchor-link" href="#Feature-Transformation">&#182;</a></h2><p>In this section you will use principal component analysis (PCA) to draw conclusions about the underlying structure of the wholesale customer data. Since using PCA on a dataset calculates the dimensions which best maximize variance, we will find which compound combinations of features best describe customers.</p>
+<h2 id="Feature-Transformation">Feature Transformation<a class="anchor-link" href="#Feature-Transformation">&#182;</a></h2><p>In this section we will use principal component analysis (PCA) to draw conclusions about the underlying structure of the wholesale customer data. Since using PCA on a dataset calculates the dimensions which best maximize variance, we will find which compound combinations of features best describe customers.</p>
 
 </div>
 </div>
@@ -14651,7 +14640,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-PCA">Implementation: PCA<a class="anchor-link" href="#Implementation:-PCA">&#182;</a></h3><p>Now that the data has been scaled to a more normal distribution and has had any necessary outliers removed, we can now apply PCA to the <code>good_data</code> to discover which dimensions about the data best maximize the variance of features involved. In addition to finding these dimensions, PCA will also report the <em>explained variance ratio</em> of each dimension — how much variance within the data is explained by that dimension alone. Note that a component (dimension) from PCA can be considered a new "feature" of the space, however it is a composition of the original features present in the data.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will implement the following:</p>
 <ul>
 <li>Import <code>sklearn.decomposition.PCA</code> and assign the results of fitting PCA in six dimensions with <code>good_data</code> to <code>pca</code>.</li>
 <li>Apply a PCA transformation of <code>log_samples</code> using <code>pca.transform</code>, and assign the results to <code>pca_samples</code>.</li>
@@ -14662,11 +14651,11 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
-<span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
+<span class="c1"># Apply PCA by fitting the good data with the same number of dimensions as features</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">good_data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Transform log_samples using the PCA fit above</span>
@@ -14747,7 +14736,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -14838,7 +14827,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-Dimensionality-Reduction">Implementation: Dimensionality Reduction<a class="anchor-link" href="#Implementation:-Dimensionality-Reduction">&#182;</a></h3><p>When using principal component analysis, one of the main goals is to reduce the dimensionality of the data — in effect, reducing the complexity of the problem. Dimensionality reduction comes at a cost: Fewer dimensions used implies less of the total variance in the data is being explained. Because of this, the <em>cumulative explained variance ratio</em> is extremely important for knowing how many dimensions are necessary for the problem. Additionally, if a signifiant amount of variance is explained by only two or three dimensions, the reduced data can be visualized afterwards.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will need to implement the following:</p>
 <ul>
 <li>Assign the results of fitting PCA in two dimensions with <code>good_data</code> to <code>pca</code>.</li>
 <li>Apply a PCA transformation of <code>good_data</code> using <code>pca.transform</code>, and assign the results to <code>reduced_data</code>.</li>
@@ -14850,7 +14839,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -14881,7 +14870,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -14963,7 +14952,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -14980,13 +14969,13 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a5ae02f0f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x15ff2404940&gt;</pre>
 </div>
 
 </div>
@@ -15022,7 +15011,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2><p>In this section, you will choose to use either a K-Means clustering algorithm or a Gaussian Mixture Model clustering algorithm to identify the various customer segments hidden in the data. You will then recover specific data points from the clusters to understand their significance by transforming them back into their original dimension and scale.</p>
+<h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2><p>In this section, we will choose to use either a K-Means clustering algorithm or a Gaussian Mixture Model clustering algorithm to identify the various customer segments hidden in the data. W will then recover specific data points from the clusters to understand their significance by transforming them back into their original dimension and scale.</p>
 
 </div>
 </div>
@@ -15033,7 +15022,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <h3 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">&#182;</a></h3><ul>
 <li>What are the advantages to using a K-Means clustering algorithm? </li>
 <li>What are the advantages to using a Gaussian Mixture Model clustering algorithm? </li>
-<li>Given your observations about the wholesale customer data so far, which of the two algorithms will you use and why?</li>
+<li>Given our observations about the wholesale customer data so far, which of the two algorithms will we use and why?</li>
 </ul>
 <p><strong> Hint: </strong> Think about the differences between hard clustering and soft clustering and which would be appropriate for our dataset.</p>
 
@@ -15053,8 +15042,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Creating-Clusters">Implementation: Creating Clusters<a class="anchor-link" href="#Implementation:-Creating-Clusters">&#182;</a></h3><p>Depending on the problem, the number of clusters that you expect to be in the data may already be known. When the number of clusters is not known <em>a priori</em>, there is no guarantee that a given number of clusters best segments the data, since it is unclear what structure exists in the data — if any. However, we can quantify the "goodness" of a clustering by calculating each data point's <em>silhouette coefficient</em>. The <a href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html">silhouette coefficient</a> for a data point measures how similar it is to its assigned cluster from -1 (dissimilar) to 1 (similar). Calculating the <em>mean</em> silhouette coefficient provides for a simple scoring method of a given clustering.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<h3 id="Implementation:-Creating-Clusters">Implementation: Creating Clusters<a class="anchor-link" href="#Implementation:-Creating-Clusters">&#182;</a></h3><p>Depending on the problem, the number of clusters that we expect to be in the data may already be known. When the number of clusters is not known <em>a priori</em>, there is no guarantee that a given number of clusters best segments the data, since it is unclear what structure exists in the data — if any. However, we can quantify the "goodness" of a clustering by calculating each data point's <em>silhouette coefficient</em>. The <a href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html">silhouette coefficient</a> for a data point measures how similar it is to its assigned cluster from -1 (dissimilar) to 1 (similar). Calculating the <em>mean</em> silhouette coefficient provides for a simple scoring method of a given clustering.</p>
+<p>In the code block below, we will need to implement the following:</p>
 <ul>
 <li>Fit a clustering algorithm to the <code>reduced_data</code> and assign it to <code>clusterer</code>.</li>
 <li>Predict the cluster for each data point in <code>reduced_data</code> using <code>clusterer.predict</code> and assign them to <code>preds</code>.</li>
@@ -15071,24 +15060,24 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="k">import</span> <span class="n">GaussianMixture</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">silhouette_score</span>
-<span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
+<span class="c1">#  Apply clustering algorithm of our choice to the reduced data </span>
 <span class="n">clusterer</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
-<span class="c1"># TODO: Predict the cluster for each data point</span>
+<span class="c1"># Predict the cluster for each data point</span>
 <span class="n">preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
-<span class="c1"># TODO: Find the cluster centers</span>
+<span class="c1"># Find the cluster centers</span>
 <span class="n">centers</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">means_</span>
 
-<span class="c1"># TODO: Predict the cluster for each transformed sample data point</span>
+<span class="c1"># Predict the cluster for each transformed sample data point</span>
 <span class="n">sample_preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)</span>
 
-<span class="c1"># TODO: Calculate the mean silhouette coefficient for the number of clusters chosen</span>
+<span class="c1"># Calculate the mean silhouette coefficient for the number of clusters chosen</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 </pre></div>
@@ -15120,7 +15109,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-7">Question 7<a class="anchor-link" href="#Question-7">&#182;</a></h3><ul>
-<li>Report the silhouette score for several cluster numbers you tried. </li>
+<li>Report the silhouette score for several cluster numbers we've tried. </li>
 <li>Of these, which number of clusters has the best silhouette score?</li>
 </ul>
 
@@ -15149,14 +15138,14 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Cluster-Visualization">Cluster Visualization<a class="anchor-link" href="#Cluster-Visualization">&#182;</a></h3><p>Once you've chosen the optimal number of clusters for your clustering algorithm using the scoring metric above, you can now visualize the results by executing the code block below. Note that, for experimentation purposes, you are welcome to adjust the number of clusters for your clustering algorithm to see various visualizations. The final visualization provided should, however, correspond with the optimal number of clusters.</p>
+<h3 id="Cluster-Visualization">Cluster Visualization<a class="anchor-link" href="#Cluster-Visualization">&#182;</a></h3><p>Once we've chosen the optimal number of clusters for our clustering algorithm using the scoring metric above, we can now visualize the results by executing the code block below. Note that, for experimentation purposes, we can adjust the number of clusters for your clustering algorithm to see various visualizations. The final visualization provided should, however, correspond with the optimal number of clusters.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -15194,7 +15183,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Implementation:-Data-Recovery">Implementation: Data Recovery<a class="anchor-link" href="#Implementation:-Data-Recovery">&#182;</a></h3><p>Each cluster present in the visualization above has a central point. These centers (or means) are not specifically data points from the data, but rather the <em>averages</em> of all the data points predicted in the respective clusters. For the problem of creating customer segments, a cluster's center point corresponds to <em>the average customer of that segment</em>. Since the data is currently reduced in dimension and scaled by a logarithm, we can recover the representative customer spending from these data points by applying the inverse transformations.</p>
-<p>In the code block below, you will need to implement the following:</p>
+<p>In the code block below, we will need to implement the following:</p>
 <ul>
 <li>Apply the inverse transform to <code>centers</code> using <code>pca.inverse_transform</code> and assign the new centers to <code>log_centers</code>.</li>
 <li>Apply the inverse function of <code>np.log</code> to <code>log_centers</code> using <code>np.exp</code> and assign the true centers to <code>true_centers</code>.</li>
@@ -15205,13 +15194,13 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Inverse transform the centers</span>
 <span class="n">log_centers</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">centers</span><span class="p">)</span>
 
-<span class="c1"># TODO: Exponentiate the centers</span>
+<span class="c1"># Exponentiate the centers</span>
 <span class="n">true_centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_centers</span><span class="p">)</span>
 
 <span class="c1"># Display the true centers</span>
@@ -15328,7 +15317,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -15383,7 +15372,7 @@ Sample point 2 predicted to be in Cluster 0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this final section, you will investigate ways that you can make use of the clustered data. First, you will consider how the different groups of customers, the <strong><em>customer segments</em></strong>, may be affected differently by a specific delivery scheme. Next, you will consider how giving a label to each customer (which <em>segment</em> that customer belongs to) can provide for additional features about the customer data. Finally, you will compare the <strong><em>customer segments</em></strong> to a hidden variable present in the data, to see whether the clustering identified certain relationships.</p>
+<p>In this final section, we will investigate ways that we can make use of the clustered data. First, we will consider how the different groups of customers, the <strong><em>customer segments</em></strong>, may be affected differently by a specific delivery scheme. Next, we will consider how giving a label to each customer (which <em>segment</em> that customer belongs to) can provide for additional features about the customer data. Finally, we will compare the <strong><em>customer segments</em></strong> to a hidden variable present in the data, to see whether the clustering identified certain relationships.</p>
 
 </div>
 </div>
@@ -15434,14 +15423,14 @@ Sample point 2 predicted to be in Cluster 0
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Visualizing-Underlying-Distributions">Visualizing Underlying Distributions<a class="anchor-link" href="#Visualizing-Underlying-Distributions">&#182;</a></h3><p>At the beginning of this project, it was discussed that the <code>'Channel'</code> and <code>'Region'</code> features would be excluded from the dataset so that the customer product categories were emphasized in the analysis. By reintroducing the <code>'Channel'</code> feature to the dataset, an interesting structure emerges when considering the same PCA dimensionality reduction applied earlier to the original dataset.</p>
-<p>Run the code block below to see how each data point is labeled either <code>'HoReCa'</code> (Hotel/Restaurant/Cafe) or <code>'Retail'</code> the reduced space. In addition, you will find the sample points are circled in the plot, which will identify their labeling.</p>
+<p>Run the code block below to see how each data point is labeled either <code>'HoReCa'</code> (Hotel/Restaurant/Cafe) or <code>'Retail'</code> the reduced space. In addition, we will find the sample points are circled in the plot, which will identify their labeling.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
@@ -15479,9 +15468,9 @@ Sample point 2 predicted to be in Cluster 0
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-12">Question 12<a class="anchor-link" href="#Question-12">&#182;</a></h3><ul>
-<li>How well does the clustering algorithm and number of clusters you've chosen compare to this underlying distribution of Hotel/Restaurant/Cafe customers to Retailer customers? </li>
+<li>How well does the clustering algorithm and number of clusters we've chosen compare to this underlying distribution of Hotel/Restaurant/Cafe customers to Retailer customers? </li>
 <li>Are there customer segments that would be classified as purely 'Retailers' or 'Hotels/Restaurants/Cafes' by this distribution? </li>
-<li>Would you consider these classifications as consistent with your previous definition of the customer segments?</li>
+<li>Would we consider these classifications as consistent with our previous definition of the customer segments?</li>
 </ul>
 
 </div>
@@ -15501,9 +15490,6 @@ Sample point 2 predicted to be in Cluster 0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to<br>
-<strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
-</blockquote>
 
 </div>
 </div>
